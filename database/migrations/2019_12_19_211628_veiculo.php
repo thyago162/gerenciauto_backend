@@ -18,8 +18,8 @@ class Veiculo extends Migration
             $table->unsignedBigInteger('co_modelo_veiculo');
             $table->string('nm_placa');
             $table->string('nm_cor');
-            $table->integer('nm_placa');
             $table->date('dt_ano');
+            $table->boolean('st_status');
         });
 
         Schema::table('veiculo', function (Blueprint $table) {

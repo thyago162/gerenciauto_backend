@@ -32,7 +32,7 @@ class OrdemServico extends Migration
             $table->foreign('co_responsavel_tecnico')->references('id_pessoa')->on('pessoa');
             $table->foreign('co_tipo_servico')->references('id_tipo_servico')->on('tipo_servico');
             $table->foreign('co_status_servico')->references('id_status_servico')->on('status_servico');
-            $table->foreign('co_status_pagamento')->references('id_status_pagamento')->on('status_pagamento');
+            $table->foreign('co_status_pagamento')->references('id_pagamento_servico')->on('pagamento_servico');
             $table->foreign('co_veiculo')->references('id_veiculo')->on('veiculo');
         });
     }

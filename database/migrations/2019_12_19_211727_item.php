@@ -18,7 +18,7 @@ class Item extends Migration
             $table->string('nm_item');
             $table->integer('nu_quantidade');
             $table->double('nu_valor_unitario',2);
-            $table->unsignedBigInteger('co_tipo_bem');
+            $table->unsignedBigInteger('co_tipo_item');
         });
 
         Schema::table('item', function (Blueprint $table) {

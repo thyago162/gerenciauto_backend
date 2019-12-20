@@ -10,7 +10,10 @@ class TipoItemTableSeeder extends Seeder
      *
      * @return void
      */
-    CONST TIPO_ITEM = ['Peças','Serviços'];
+    CONST TIPO_ITEM = [
+        'PEÇAS',
+        'SERVIÇOS'
+    ];
     
     public function run()
     {

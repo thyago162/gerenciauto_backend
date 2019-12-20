@@ -17,13 +17,14 @@ class Usuario extends Migration
             $table->bigIncrements('id_usuario');
             $table->string('nm_email');
             $table->string('nm_senha');
-            $table->string('nm_token_recuperacao');
-            $table->unsignedBigInteger('co_tipo_pessoa');
+            $table->string('nm_token_recuperacao')->nullable();
+            $table->unsignedBigInteger('co_qualificacao_pessoa');
             $table->date('dt_criacao');
         });
 
         Schema::table('usuario', function (Blueprint $table) {
-            $table->foreign('co_tipo_pessoa')->references('id_tipo_pessoa')->on('tipo_pessoa');
+            $table->foreign('co_qualificacao_pessoa')
+                ->references('id_qualificacao_pessoa')->on('qualificacao_pessoa');
         });
     }
 

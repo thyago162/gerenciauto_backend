@@ -18,6 +18,7 @@ class AssinaturaOficina extends Migration
             $table->unsignedBigInteger('co_oficina');
             $table->date('dt_inicio');
             $table->date('dt_fim');
+            $table->boolean('st_status');
         });
 
         Schema::table('assinatura_oficina', function (Blueprint $table) {

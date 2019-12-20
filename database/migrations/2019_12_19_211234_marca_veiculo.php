@@ -13,7 +13,7 @@ class MarcaVeiculo extends Migration
      */
     public function up()
     {
-        Schema::create('modelo_veiculo', function (Blueprint $table) {
+        Schema::create('marca_veiculo', function (Blueprint $table) {
             $table->bigIncrements('id_marca');
             $table->string('nm_marca');
         });
@@ -26,6 +26,6 @@ class MarcaVeiculo extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modelo_veiculo');
+        Schema::dropIfExists('marca_veiculo');
     }
 }
