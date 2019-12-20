@@ -19,6 +19,7 @@ class Cartao extends Migration
             $table->date('dt_data_validade');
             $table->string('nm_nome_cartao');
             $table->unsignedBigInteger('co_tipo_cartao');
+            $table->boolean('st_status');
         });
 
         Schema::table('cartao', function (Blueprint $table) {
